@@ -1,6 +1,28 @@
-python=["Karunya","Prarthana","Sulhana"]
-print(python)
-Data_science=["karunya","Amritha","Varsha"]
-print(Data_science)
-python.add("Anju")
-print(python)
+
+python_students = {"Anu", "Rahul", "Meera"}
+data_science_students = {"Rahul", "Meera", "Arjun"}
+python_students.add("Vishnu")
+data_science_students.remove("Arjun")
+both_courses = python_students & data_science_students
+print("Students in both courses:", both_courses)
+python_only = python_students - data_science_students
+print("Students only in Python:", python_only)
+all_students = python_students | data_science_students
+print("All students:", all_students)course_students = {
+    "Python": len(python_students),
+    "Data Science": len(data_science_students)
+}
+
+for course, students in course_students.items():
+    print(f"Course: {course}, Students: {students}")
+expected_growth = {
+    course: students * 2
+    for course, students in course_students.items()
+}
+
+print("Expected growth:", expected_growth)expected_growth = {
+    course: students * 2
+    for course, students in course_students.items()
+}
+
+print("Expected growth:", expected_growth)
